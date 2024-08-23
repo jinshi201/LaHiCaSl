@@ -37,4 +37,8 @@ Moreover, the CCA-Rank test  also be used.
 
 Reference: Huang B, Low C J H, Xie F, et al. Latent hierarchical causal structure discovery with rank constraints[J]. Advances in neural information processing systems, 2022, 35: 5549-5561.
 ```
+### Citation
+If you use this code, please cite the following paper:
+
+Xie F*, Huang B*, Chen, Z., Cai, R., Glymour, C., Geng, Z., and Zhang, K. Generalized independent noise condition for estimating causal structure with latent variables[J]. Journal of Machine Learning Research, 2024, 25: 1-61.
 
