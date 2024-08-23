@@ -61,33 +61,6 @@ def Toa():
     return 0.5
 
 
-def CaseI(Num=3000):
-    L1=SelectPdf(Num)
-    L2=SelectPdf(Num)*Toa()+ToBij()*L1
-    L3=SelectPdf(Num)*Toa()+ToBij()*L1+ToBij()*L2
-
-    x1=SelectPdf(Num)*Toa()+ToBij()*L1
-    x2=SelectPdf(Num)*Toa()+ToBij()*L1
-    x3=SelectPdf(Num)*Toa()+ToBij()*L1
-
-
-    x4=SelectPdf(Num)*Toa()+ToBij()*L2
-    x5=SelectPdf(Num)*Toa()+ToBij()*L2
-    x6=SelectPdf(Num)*Toa()+ToBij()*L2
-
-
-
-    x7=SelectPdf(Num)*Toa()+ToBij()*L3
-    x8=SelectPdf(Num)*Toa()+ToBij()*L3
-    x9=SelectPdf(Num)*Toa()+ToBij()*L3
-    x10=SelectPdf(Num)*Toa()+ToBij()*L3+ToBij()*x9
-
-
-    data = pd.DataFrame(np.array([x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]).T,columns=['x1','x2','x3','x4','x5','x6','x7','x8','x9','x10'])
-
-    data = (data-data.mean())/data.std()
-    #data = data-data.mean()
-    return data
 
 
 def CaseII(Num=3000):
@@ -205,44 +178,3 @@ def CaseIV(Num=3000):
     return data
 
 
-
-def ImpureGdata(Num=3000):
-    L1=SelectPdf(Num)
-    L2=SelectPdf(Num)+ToBij()*L1
-    L3=SelectPdf(Num)+ToBij()*L1
-
-    x1=SelectPdf(Num)*Toa()+ToBij()*L1
-    x2=SelectPdf(Num)*Toa()+ToBij()*L1
-    x3=SelectPdf(Num)*Toa()+ToBij()*L1
-
-
-    x4=SelectPdf(Num)*Toa()+ToBij()*L2
-    x5=SelectPdf(Num)*Toa()+ToBij()*L2
-    x6=SelectPdf(Num)*Toa()+ToBij()*L2
-    x10=SelectPdf(Num)*Toa()+ToBij()*L2+ToBij()*x6
-
-
-
-    x7=SelectPdf(Num)*Toa()+ToBij()*L3+ToBij()*L2
-    x8=SelectPdf(Num)*Toa()+ToBij()*L3+ToBij()*L2
-    x9=SelectPdf(Num)*Toa()+ToBij()*L3+ToBij()*L2
-
-    x11=SelectPdf(Num)*Toa()+ToBij()*L3
-    x12=SelectPdf(Num)*Toa()+ToBij()*L3
-
-
-    data = pd.DataFrame(np.array([x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12]).T,columns=['x1','x2','x3','x4','x5','x6','x7','x8','x9','x10','x11','x12'])
-
-    data = (data-data.mean())/data.std()
-    #data = data-data.mean()
-    return data
-
-
-
-def main():
-    data = CaseI(1000)
-    print(data)
-    #data.to_csv('data.csv',header=0,index=0)
-
-if __name__ == '__main__':
-    main()
