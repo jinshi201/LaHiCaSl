@@ -85,7 +85,7 @@ def Latent_Hierarchical_Causal_Structure_Learning(data, alpha):
 
     print('Begin with Phase II: Infer causal structure among latent variables +++++++++++++++++++')
 
-    LocallyInferCausalStructure.LocalLearningStructure(AllImpureCluster, LatentIndex, Ora_data)
+    LatentIndex = LocallyInferCausalStructure.LocalLearningStructure(AllImpureCluster, LatentIndex, Ora_data)
 
     print('End of Phase II: Infer causal structure among latent variables +++++++++++++++++++')
 
