@@ -63,6 +63,7 @@ def Toa():
 
 
 
+
 def CaseII(Num=3000):
     L1=SelectPdf(Num)
     L2=SelectPdf(Num)
@@ -176,5 +177,7 @@ def CaseIV(Num=3000):
     data = (data-data.mean())/data.std()
     #data = data-data.mean()
     return data
+
+
 
 
