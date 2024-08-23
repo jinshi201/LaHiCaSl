@@ -9,6 +9,6 @@ import LaHiCaSl
 
 
 
-data = SD.CaseIV(10000)
+data = SD.CaseII(10000)
 
 LaHiCaSl.Latent_Hierarchical_Causal_Structure_Learning(data, 0.01)
