@@ -4,6 +4,8 @@
 
 This is the Implementation of LaHiCaSl algorithm, Version 0.1.
 
+----------Version 1.0 (on going)
+
 ## Overview
 
 This project estimates the causal structure among the latent variables in the Linear Non-Gaussian Latent Hierarchical Models, using the GIN condition.
